@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>[NOMBRE DE LA EMPRESA]</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+  <!-- ==========================================
+       NAVBAR
+  =========================================== -->
+  <nav>
+    <div class="contenedor nav-inner">
+      <div class="logo">
+        <!-- ✏️ REEMPLAZA con el nombre real + acento de color -->
+        [Nombre]<span>.</span>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#sobre">Nosotros</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#galeria">Proyectos</a></li>
+        <li><a href="#educacion">Educación</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <a href="#contacto" class="btn btn-primario nav-cta" id="nav-cta">Contáctanos</a>
+      <button class="hamburguesa" id="hamburguesa" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ==========================================
+       HERO
+  =========================================== -->
+  <section class="hero">
+    <div class="contenedor">
+      <div class="hero-contenido">
+        <span class="etiqueta">Reforestación · Desarrollo sustentable</span>
+        <h1>
+          <!-- ✏️ REEMPLAZA con el eslogan real -->
+          Restauramos bosques,<br/>
+          <em>sembramos futuro</em>
+        </h1>
+        <p>
+          <!-- ✏️ REEMPLAZA con descripción real de la empresa -->
+          [NOMBRE DE LA EMPRESA] trabaja por la recuperación de ecosistemas forestales
+          y el desarrollo sustentable en [ZONA GEOGRÁFICA].
+        </p>
+        <div class="hero-botones">
+          <a href="#servicios" class="btn btn-primario">Ver nuestro trabajo</a>
+          <a href="#contacto" class="btn btn-secundario" style="color:var(--blanco);border-color:rgba(255,255,255,0.6)">Contáctanos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SOBRE NOSOTROS
+  =========================================== -->
+  <section class="sobre" id="sobre">
+    <div class="contenedor">
+      <div class="sobre-grid">
+        <div class="sobre-imagen">
+          <!-- 📸 REEMPLAZA src con foto real del equipo o del campo -->
+          <img
+            src="https://images.unsplash.com/photo-1574768864-c2c5e1b9e1e4?w=800&q=80"
+            alt="Equipo de [NOMBRE DE LA EMPRESA] trabajando en campo"
+          />
+        </div>
+        <div class="sobre-texto">
+          <span class="etiqueta">Quiénes somos</span>
+          <h2>
+            <!-- ✏️ REEMPLAZA con frase de identidad real -->
+            Una organización comprometida con la vida del bosque
+          </h2>
+          <p>
+            <!-- ✏️ REEMPLAZA con historia / presentación real -->
+            [NOMBRE DE LA EMPRESA] nació con el propósito de revertir la degradación
+            ambiental en nuestra región. Somos un equipo de personas comprometidas con
+            el medio ambiente y con las comunidades que dependen de él.
+          </p>
+          <p>
+            Creemos que la reforestación es solo el comienzo: acompañamos cada árbol
+            plantado con educación, seguimiento y desarrollo sustentable de largo plazo.
+          </p>
+          <a href="#contacto" class="btn btn-primario" style="margin-top:12px">Trabaja con nosotros</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       OBJETIVO
+  =========================================== -->
+  <section class="objetivo" id="objetivo">
+    <div class="contenedor">
+      <span class="etiqueta">Nuestro objetivo</span>
+      <h2>
+        <!-- ✏️ REEMPLAZA con el objetivo oficial de la empresa -->
+        [OBJETIVO PRINCIPAL DE LA EMPRESA — escríbelo aquí en una o dos oraciones claras]
+      </h2>
+      <p>
+        <!-- ✏️ REEMPLAZA con detalle del objetivo -->
+        Buscamos generar un impacto medible y duradero en los ecosistemas forestales,
+        involucrando a la comunidad y promoviendo el desarrollo sustentable como modelo de vida.
+      </p>
+
+      <!-- ✏️ REEMPLAZA los números con cifras reales o proyectadas -->
+      <div class="objetivo-cifras">
+        <div class="cifra">
+          <div class="cifra-numero">[X]</div>
+          <div class="cifra-label">Árboles plantados</div>
+        </div>
+        <div class="cifra">
+          <div class="cifra-numero">[X]</div>
+          <div class="cifra-label">Hectáreas restauradas</div>
+        </div>
+        <div class="cifra">
+          <div class="cifra-numero">[X]</div>
+          <div class="cifra-label">Comunidades beneficiadas</div>
+        </div>
+        <div class="cifra">
+          <div class="cifra-numero">[X]</div>
+          <div class="cifra-label">Talleres de educación ambiental</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SERVICIOS / TRABAJO
+  =========================================== -->
+  <section class="servicios" id="servicios">
+    <div class="contenedor">
+      <div class="servicios-header">
+        <span class="etiqueta">Lo que hacemos</span>
+        <h2>Nuestro trabajo en campo</h2>
+        <p>Cada acción está pensada para generar impacto real y sostenido en el ecosistema.</p>
+      </div>
+      <div class="cards-grid">
+
+        <div class="card">
+          <div class="card-icono">🌱</div>
+          <h3>Reforestación</h3>
+          <p>
+            <!-- ✏️ REEMPLAZA con descripción real del servicio -->
+            Plantación de especies nativas seleccionadas según el ecosistema local,
+            con seguimiento y cuidado durante su establecimiento.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icono">♻️</div>
+          <h3>Desarrollo sustentable</h3>
+          <p>
+            <!-- ✏️ REEMPLAZA con descripción real -->
+            Promovemos prácticas sustentables en comunidades y empresas para
+            reducir el impacto ambiental y generar valor a largo plazo.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icono">📚</div>
+          <h3>Educación ambiental</h3>
+          <p>
+            <!-- ✏️ REEMPLAZA con descripción real -->
+            Talleres, pláticas y materiales dirigidos al público en general
+            para generar conciencia sobre la importancia del bosque.
+          </p>
+        </div>
+
+        <!-- ✏️ Agrega más cards si hay más servicios -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       GALERÍA DE PROYECTOS
+  =========================================== -->
+  <section class="galeria" id="galeria">
+    <div class="contenedor">
+      <div class="galeria-header">
+        <span class="etiqueta">Proyectos</span>
+        <h2>Nuestro trabajo en imágenes</h2>
+        <!-- ✏️ REEMPLAZA cuando haya proyectos reales -->
+        <p>Aquí irán las fotografías de los proyectos realizados. Por el momento este espacio está reservado.</p>
+      </div>
+      <div class="galeria-grid">
+        <!-- 📸 REEMPLAZA cada placeholder con <img src="..." alt="..."> -->
+        <div class="galeria-item grande">
+          <div class="galeria-placeholder">
+            <span>🌳</span>
+            <p>Foto principal del proyecto</p>
+          </div>
+        </div>
+        <div class="galeria-item">
+          <div class="galeria-placeholder">
+            <span>🌿</span>
+            <p>Foto del proyecto</p>
+          </div>
+        </div>
+        <div class="galeria-item">
+          <div class="galeria-placeholder">
+            <span>🌍</span>
+            <p>Foto del proyecto</p>
+          </div>
+        </div>
+        <div class="galeria-item">
+          <div class="galeria-placeholder">
+            <span>💧</span>
+            <p>Foto del proyecto</p>
+          </div>
+        </div>
+        <div class="galeria-item grande">
+          <div class="galeria-placeholder">
+            <span>🌱</span>
+            <p>Foto del proyecto</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       EDUCACIÓN AMBIENTAL
+  =========================================== -->
+  <section class="educacion" id="educacion">
+    <div class="contenedor">
+      <div class="educacion-grid">
+        <div class="educacion-texto">
+          <span class="etiqueta">Educación ambiental</span>
+          <h2>Sembramos conciencia desde las raíces</h2>
+          <p>
+            <!-- ✏️ REEMPLAZA con descripción real del programa educativo -->
+            La educación es parte fundamental de nuestra misión. Trabajamos con
+            escuelas, comunidades y empresas para crear una cultura ambiental
+            que trascienda más allá de cada árbol plantado.
+          </p>
+          <ul class="lista-edu">
+            <!-- ✏️ REEMPLAZA con actividades reales -->
+            <li>Talleres de reforestación para niños y jóvenes</li>
+            <li>Pláticas sobre biodiversidad y ecosistemas locales</li>
+            <li>Recorridos guiados por zonas reforestadas</li>
+            <li>Materiales didácticos gratuitos para escuelas</li>
+          </ul>
+          <a href="#contacto" class="btn btn-primario">Solicitar un taller</a>
+        </div>
+        <div class="educacion-visual">
+          <h3>¿A quién va dirigido?</h3>
+          <p>
+            <!-- ✏️ REEMPLAZA con descripción real del público -->
+            Nuestros programas están diseñados para el público en general:
+            niños, jóvenes, adultos, escuelas, empresas y comunidades
+            que quieran ser parte del cambio ambiental.
+          </p>
+          <br/>
+          <h3 style="margin-top:8px">¿Cómo participar?</h3>
+          <p>
+            <!-- ✏️ REEMPLAZA con instrucciones reales -->
+            Solo contáctanos y coordinamos una sesión adaptada a tu grupo
+            o institución, sin costo o con cuota de recuperación simbólica.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       CONTACTO
+  =========================================== -->
+  <section class="contacto" id="contacto">
+    <div class="contenedor">
+      <div class="contacto-inner">
+        <div class="contacto-info">
+          <span class="etiqueta">Contacto</span>
+          <h2>Hablemos y sembremos juntos</h2>
+          <p>¿Tienes un proyecto, quieres un taller o simplemente quieres saber más? Escríbenos.</p>
+
+          <div class="dato-contacto">
+            <div class="dato-icono">📧</div>
+            <div class="dato-texto">
+              <small>Correo</small>
+              <!-- ✏️ REEMPLAZA con correo real -->
+              <strong>[correo@empresa.com]</strong>
+            </div>
+          </div>
+
+          <div class="dato-contacto">
+            <div class="dato-icono">📱</div>
+            <div class="dato-texto">
+              <small>WhatsApp / Teléfono</small>
+              <!-- ✏️ REEMPLAZA con número real -->
+              <strong>[+52 000 000 0000]</strong>
+            </div>
+          </div>
+
+          <div class="dato-contacto">
+            <div class="dato-icono">📍</div>
+            <div class="dato-texto">
+              <small>Zona de operación</small>
+              <!-- ✏️ REEMPLAZA con zona real -->
+              <strong>[ZONA GEOGRÁFICA]</strong>
+            </div>
+          </div>
+        </div>
+
+        <form class="form-contacto" onsubmit="enviarFormulario(event)">
+          <div class="form-fila">
+            <div class="campo">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" placeholder="Tu nombre" required/>
+            </div>
+            <div class="campo">
+              <label for="email">Correo</label>
+              <input type="email" id="email" placeholder="tu@correo.com" required/>
+            </div>
+          </div>
+          <div class="campo">
+            <label for="asunto">Asunto</label>
+            <input type="text" id="asunto" placeholder="¿En qué podemos ayudarte?"/>
+          </div>
+          <div class="campo">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" placeholder="Cuéntanos más..." required></textarea>
+          </div>
+          <button type="submit" class="btn-enviar">Enviar mensaje</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER
+  =========================================== -->
+  <footer>
+    <div class="contenedor">
+      <div class="footer-inner">
+        <div class="footer-marca">
+          <div class="logo">[Nombre]<span>.</span></div>
+          <p>
+            <!-- ✏️ REEMPLAZA con misión corta -->
+            Reforestando el futuro, un árbol a la vez.
+          </p>
+        </div>
+        <div class="footer-links">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="#sobre">Nosotros</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#galeria">Proyectos</a></li>
+            <li><a href="#educacion">Educación</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Redes sociales</h4>
+          <ul>
+            <!-- ✏️ REEMPLAZA con URLs reales cuando existan -->
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">YouTube</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <!-- ✏️ REEMPLAZA con nombre real y año -->
+        &copy; 2025 [NOMBRE DE LA EMPRESA]. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       JAVASCRIPT
+  =========================================== -->
+  <script>
+    // Menú hamburguesa (móvil)
+    const hamburguesa = document.getElementById('hamburguesa');
+    const navLinks    = document.getElementById('nav-links');
+    const navCta      = document.getElementById('nav-cta');
+
+    hamburguesa.addEventListener('click', () => {
+      navLinks.classList.toggle('abierto');
+      navCta.classList.toggle('abierto');
+    });
+
+    // Cerrar menú al hacer clic en un enlace
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('abierto');
+        navCta.classList.remove('abierto');
+      });
+    });
+
+    // Formulario de contacto (placeholder — conectar con backend o Formspree)
+    function enviarFormulario(e) {
+      e.preventDefault();
+      alert('Mensaje enviado. ¡Gracias por contactarnos!\n\n(Conecta este formulario a Formspree o tu correo cuando tengas el dominio.)');
+      e.target.reset();
+    }
+  </script>
+
+</body>
+</html>
