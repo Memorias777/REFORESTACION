@@ -3,27 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Oikos Brana A.C</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <title>Oikos Brana A.C — Restauración Ecológica</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
 
+  <!-- LOADER -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-icon">🌱</div>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+    </div>
+  </div>
   <!-- ==========================================
        NAVBAR
   =========================================== -->
-  <nav>
+  <nav id="navbar">
     <div class="contenedor nav-inner">
       <div class="logo">
-        <!-- ✏️ REEMPLAZA con el nombre real + acento de color -->
-        <span>Oikos Brana A.C</span>
+        <span class="logo-oikos">Oikos</span><span class="logo-brana"> Brana</span><span class="logo-dot">.</span>
       </div>
       <ul class="nav-links" id="nav-links">
-        <li><a href="#sobre">Nosotros</a></li>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#galeria">Proyectos</a></li>
-        <li><a href="#educacion">Educación</a></li>
-        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#sobre" class="nav-link">Nosotros</a></li>
+        <li><a href="#objetivo" class="nav-link">Objetivo</a></li>
+        <li><a href="#servicios" class="nav-link">Servicios</a></li>
+        <li><a href="#etapas" class="nav-link">Programa</a></li>
+        <li><a href="#educacion" class="nav-link">Educación</a></li>
+        <li><a href="#contacto" class="nav-link">Contacto</a></li>
       </ul>
       <a href="#contacto" class="btn btn-primario nav-cta" id="nav-cta">Contáctanos</a>
       <button class="hamburguesa" id="hamburguesa" aria-label="Abrir menú">
@@ -35,24 +42,35 @@
   <!-- ==========================================
        HERO
   =========================================== -->
-  <section class="hero">
+  <section class="hero" id="inicio">
+    <div class="hero-particles" id="particles"></div>
+    <div class="hero-overlay"></div>
     <div class="contenedor">
-      <div class="hero-contenido">
-        <span class="etiqueta">Reforestación · Desarrollo sustentable</span>
-        <h1>
-          <!-- ✏️ REEMPLAZA con el eslogan real -->
-          Restauramos bosques,<br/>
-          <em>sembramos vida</em>
+      <div class="hero-contenido reveal-hero">
+        <span class="etiqueta animate-fade-down">Investigación · Reforestación · Transparencia</span>
+        <h1 class="animate-fade-up">
+          Restauramos ecosistemas,<br/>
+          <em>sembramos el futuro</em>
         </h1>
-        <p>
-          <!-- ✏️ REEMPLAZA con descripción real de la empresa -->
-          Oikos Brana A.C trabaja por la recuperación de ecosistemas forestales y el desarrollo sustentable
+        <p class="animate-fade-up delay-1">
+          Oikos Brana A.C es una asociación civil dedicada a la investigación y 
+          restauración de ecosistemas mediante acciones de reforestación y saneamiento, 
+          operando bajo un modelo de transparencia absoluta.
         </p>
-        <div class="hero-botones">
-          <a href="#servicios" class="btn btn-primario">Ver nuestro trabajo</a>
-          <a href="#contacto" class="btn btn-secundario" style="color:var(--blanco);border-color:rgba(255,255,255,0.6)">Contáctanos</a>
+        <div class="hero-botones animate-fade-up delay-2">
+          <a href="#servicios" class="btn btn-primario btn-glow">Ver nuestro trabajo</a>
+          <a href="#contacto" class="btn btn-secundario-hero">Contáctanos</a>
+        </div>
+        <div class="hero-ods animate-fade-up delay-3">
+          <span class="ods-tag">ODS 6 · Agua Limpia</span>
+          <span class="ods-tag">ODS 13 · Acción Climática</span>
+          <span class="ods-tag">ODS 15 · Vida Terrestre</span>
         </div>
       </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
     </div>
   </section>
 
@@ -62,30 +80,72 @@
   <section class="sobre" id="sobre">
     <div class="contenedor">
       <div class="sobre-grid">
-        <div class="sobre-imagen">
-          <!-- 📸 REEMPLAZA src con foto real del equipo o del campo -->
+        <div class="sobre-imagen reveal-left">
           <img
-            src="https://images.unsplash.com/photo-1574768864-c2c5e1b9e1e4?w=800&q=80"
+            src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800&q=80"
             alt="Equipo de Oikos Brana A.C trabajando en campo"
           />
+          <div class="sobre-badge">
+            <span class="badge-icon">🌍</span>
+            <div>
+              <strong>Visión Internacional</strong>
+              <small>Impacto nacional e internacional</small>
+            </div>
+          </div>
         </div>
-        <div class="sobre-texto">
-          <span class="etiqueta">Quiénes somos</span>
-          <h2>
-            <!-- ✏️ REEMPLAZA con frase de identidad real -->
-            Una organización comprometida con la vida del bosque
-          </h2>
+        <div class="sobre-texto reveal-right">
+          <span class="etiqueta">¿Quiénes Somos?</span>
+          <h2>Una organización comprometida con la vida del bosque</h2>
           <p>
-            <!-- ✏️ REEMPLAZA con historia / presentación real -->
-            Oikos Brana A.C nació con el propósito de revertir la degradación
-            ambiental en nuestra región. Somos un equipo de personas comprometidas con
-            el medio ambiente y con las comunidades que dependen de él.
+            <strong>Oikos Brana</strong> es una A.C dedicada a la investigación y restauración 
+            de ecosistemas mediante acciones de reforestación y saneamiento. Operamos bajo un 
+            modelo de <strong>transparencia absoluta</strong>, asegurando que cada una de nuestras 
+            intervenciones en flora y fauna se realice dentro de los marcos geográficos autorizados.
           </p>
           <p>
-            Creemos que la reforestación es solo el comienzo: acompañamos cada árbol
-            plantado con educación, seguimiento y desarrollo sustentable de largo plazo.
+            Trabajamos en la intersección entre <em>sociedad, medio ambiente y gobierno</em>, 
+            sensibilizando a la población sobre la importancia de prevenir la contaminación y 
+            garantizando que todas nuestras acciones sean de impacto positivo.
           </p>
-          <a href="#contacto" class="btn btn-primario" style="margin-top:12px">Trabaja con nosotros</a>
+          <div class="valores-chips">
+            <span class="chip">Transparencia</span>
+            <span class="chip">Compromiso social</span>
+            <span class="chip">Responsabilidad</span>
+            <span class="chip">Legalidad</span>
+            <span class="chip">Honestidad</span>
+          </div>
+          <a href="#contacto" class="btn btn-primario" style="margin-top:24px">Trabaja con nosotros</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       MISIÓN Y VISIÓN
+  =========================================== -->
+  <section class="mision-vision" id="mision">
+    <div class="contenedor">
+      <div class="mv-grid">
+        <div class="mv-card reveal-up">
+          <div class="mv-icono">🎯</div>
+          <h3>Misión</h3>
+          <p>
+            Contribuir a la regeneración de los ecosistemas mediante la investigación científica, 
+            la preservación de especies silvestres y reforestación estratégica. Trabajamos para 
+            sensibilizar a la población sobre la importancia de prevenir la contaminación, 
+            garantizando que todas nuestras acciones sean de impacto positivo.
+          </p>
+        </div>
+        <div class="mv-card reveal-up delay-1">
+          <div class="mv-icono">🔭</div>
+          <h3>Visión</h3>
+          <p>
+            Consolidarse como una organización referente en la restauración ecológica y la 
+            conservación de la vida silvestre a nivel <strong>nacional e internacional</strong>. 
+            Ser un modelo de gestión institucional que destaque por su impacto ambiental positivo 
+            y su capacidad para recuperar el equilibrio natural en beneficio de las presentes 
+            y futuras generaciones.
+          </p>
         </div>
       </div>
     </div>
@@ -95,35 +155,33 @@
        OBJETIVO
   =========================================== -->
   <section class="objetivo" id="objetivo">
+    <div class="objetivo-bg-anim"></div>
     <div class="contenedor">
-      <span class="etiqueta">Nuestro objetivo</span>
-      <h2>
-        <!-- ✏️ REEMPLAZA con el objetivo oficial de la empresa -->
-        [OBJETIVO PRINCIPAL DE LA EMPRESA]
+      <span class="etiqueta etiqueta-blanca reveal-up">Nuestro Objetivo Principal</span>
+      <h2 class="reveal-up">
+        Ejecutar actividades de investigación, preservación y restauración del equilibrio ecológico
       </h2>
-      <p>
-        <!-- ✏️ REEMPLAZA con detalle del objetivo -->
-        Buscamos generar un impacto medible y duradero en los ecosistemas forestales,
-        involucrando a la comunidad y promoviendo el desarrollo sustentable como modelo de vida.
+      <p class="reveal-up delay-1">
+        El propósito central de Oikos Brana es mitigar la contaminación de los recursos vitales 
+        — agua, aire y suelo —, fomentando la protección ambiental a través de programas de 
+        plantación de árboles de diversas variedades, como jacarandas, limoneros y especies nativas.
       </p>
-
-      <!-- ✏️ REEMPLAZA los números con cifras reales o proyectadas -->
       <div class="objetivo-cifras">
-        <div class="cifra">
-          <div class="cifra-numero">[X]</div>
-          <div class="cifra-label">Árboles plantados</div>
+        <div class="cifra reveal-up delay-1">
+          <div class="cifra-numero counter" data-target="3">0</div>
+          <div class="cifra-label">Etapas de programa</div>
         </div>
-        <div class="cifra">
-          <div class="cifra-numero">[X]</div>
-          <div class="cifra-label">Hectáreas restauradas</div>
+        <div class="cifra reveal-up delay-2">
+          <div class="cifra-numero counter" data-target="3">0</div>
+          <div class="cifra-label">ODS de la ONU alineados</div>
         </div>
-        <div class="cifra">
-          <div class="cifra-numero">[X]</div>
-          <div class="cifra-label">Comunidades beneficiadas</div>
+        <div class="cifra reveal-up delay-3">
+          <div class="cifra-numero">∞</div>
+          <div class="cifra-label">Compromiso generacional</div>
         </div>
-        <div class="cifra">
-          <div class="cifra-numero">[X]</div>
-          <div class="cifra-label">Talleres de educación ambiental</div>
+        <div class="cifra reveal-up delay-4">
+          <div class="cifra-numero">100%</div>
+          <div class="cifra-label">Transparencia absoluta</div>
         </div>
       </div>
     </div>
@@ -134,45 +192,215 @@
   =========================================== -->
   <section class="servicios" id="servicios">
     <div class="contenedor">
-      <div class="servicios-header">
+      <div class="servicios-header reveal-up">
         <span class="etiqueta">Lo que hacemos</span>
         <h2>Nuestro trabajo en campo</h2>
-        <p>Cada acción está pensada para generar impacto real y sostenido en el ecosistema.</p>
+        <p>Cada acción está pensada para generar impacto real, medible y sostenido en el ecosistema.</p>
       </div>
       <div class="cards-grid">
 
-        <div class="card">
+        <div class="card reveal-up delay-1">
           <div class="card-icono">🌱</div>
-          <h3>Reforestación</h3>
+          <h3>Reforestación Estratégica</h3>
           <p>
-            <!-- ✏️ REEMPLAZA con descripción real del servicio -->
-            Plantación de especies nativas seleccionadas según el ecosistema local,
-            con seguimiento y cuidado durante su establecimiento.
+            Plantación de especies nativas — jacarandas, limoneros y otras variedades — 
+            seleccionadas según el ecosistema local, con seguimiento científico y 
+            cuidado durante su establecimiento y crecimiento.
           </p>
+          <div class="card-tag">Etapa II · 2.1</div>
         </div>
 
-        <div class="card">
-          <div class="card-icono">♻️</div>
-          <h3>Desarrollo sustentable</h3>
+        <div class="card reveal-up delay-2">
+          <div class="card-icono">💧</div>
+          <h3>Saneamiento Ambiental</h3>
           <p>
-            <!-- ✏️ REEMPLAZA con descripción real -->
-            Promovemos prácticas sustentables en comunidades y empresas para
-            reducir el impacto ambiental y generar valor a largo plazo.
+            Intervenciones directas para la limpieza y recuperación de suelos y cuerpos de agua 
+            en las zonas geográficas autorizadas, contribuyendo al ODS 6 de Agua Limpia.
           </p>
+          <div class="card-tag">ODS 6</div>
         </div>
 
-        <div class="card">
-          <div class="card-icono">📚</div>
-          <h3>Educación ambiental</h3>
+        <div class="card reveal-up delay-3">
+          <div class="card-icono">🦋</div>
+          <h3>Preservación de Fauna</h3>
           <p>
-            <!-- ✏️ REEMPLAZA con descripción real -->
-            Talleres, pláticas y materiales dirigidos al público en general
-            para generar conciencia sobre la importancia del bosque.
+            Implementación de acciones específicas para la protección y recuperación del hábitat 
+            de especies silvestres locales, alineado al ODS 15 de Vida de Ecosistemas Terrestres.
           </p>
+          <div class="card-tag">ODS 15</div>
         </div>
 
-        <!-- ✏️ Agrega más cards si hay más servicios -->
+        <div class="card reveal-up delay-1">
+          <div class="card-icono">🔬</div>
+          <h3>Investigación Científica</h3>
+          <p>
+            Mapeo de zonas críticas, diagnóstico de ecosistemas y selección de especies según 
+            criterios científicos. Documentamos procesos para compartirlos como modelos de 
+            gestión institucional a nivel nacional e internacional.
+          </p>
+          <div class="card-tag">Etapa I</div>
+        </div>
 
+        <div class="card reveal-up delay-2">
+          <div class="card-icono">📊</div>
+          <h3>Transparencia y Rendición de Cuentas</h3>
+          <p>
+            Georreferenciación de cada intervención, documentación con fotografías y métricas 
+            de impacto en tiempo real. Publicación de reportes de supervivencia de especies 
+            para donantes y sociedad.
+          </p>
+          <div class="card-tag">Etapa II · 2.2</div>
+        </div>
+
+        <div class="card reveal-up delay-3">
+          <div class="card-icono">🤝</div>
+          <h3>Vinculación Comunitaria</h3>
+          <p>
+            Coordinación de voluntarios y aliados estratégicos bajo los valores de 
+            responsabilidad y compromiso social. Formalizamos redes de "sociedad organizada 
+            y consciente" que asumen la custodia de los ecosistemas restaurados.
+          </p>
+          <div class="card-tag">Etapa II · 2.3</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       PROGRAMA DE TRABAJO (ETAPAS)
+  =========================================== -->
+  <section class="etapas" id="etapas">
+    <div class="contenedor">
+      <div class="etapas-header reveal-up">
+        <span class="etiqueta">Programa de Trabajo</span>
+        <h2>Tres etapas para un impacto duradero</h2>
+        <p>Nuestro modelo de intervención garantiza resultados medibles y transparentes en cada fase.</p>
+      </div>
+
+      <div class="etapas-timeline">
+
+        <div class="etapa-item reveal-left">
+          <div class="etapa-numero">I</div>
+          <div class="etapa-contenido">
+            <h3>Programa de Trabajo</h3>
+            <div class="etapa-pasos">
+              <div class="paso">
+                <span class="paso-num">1</span>
+                <div>
+                  <strong>Fase de diagnóstico e investigación</strong>
+                  <p>Mapeo de zonas críticas y selección de especies (jacarandas, limoneros y nativas) según el ecosistema.</p>
+                </div>
+              </div>
+              <div class="paso">
+                <span class="paso-num">2</span>
+                <div>
+                  <strong>Fase de ejecución técnica</strong>
+                  <p>Jornadas de reforestación estratégica y limpieza de suelos y cuerpos de agua.</p>
+                </div>
+              </div>
+              <div class="paso">
+                <span class="paso-num">3</span>
+                <div>
+                  <strong>Fase de monitoreo y transparencia</strong>
+                  <p>Auditoría de supervivencia de especies y publicación de reportes de impacto ambiental para donantes y sociedad.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="etapa-item reveal-right">
+          <div class="etapa-numero">II</div>
+          <div class="etapa-contenido">
+            <h3>Intervención Operativa y Despliegue en Campo</h3>
+            <div class="etapa-cuadro">
+              <div class="cuadro-item">
+                <span>🌲</span>
+                <strong>Ejecución de reforestación estratégica</strong>
+              </div>
+              <div class="cuadro-item">
+                <span>📋</span>
+                <strong>Activación del modelo de transparencia</strong>
+              </div>
+              <div class="cuadro-item">
+                <span>🏘️</span>
+                <strong>Vinculación y sensibilización activa</strong>
+              </div>
+              <div class="cuadro-item">
+                <span>📈</span>
+                <strong>Monitoreo de impacto inmediato (ODS)</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="etapa-item reveal-left">
+          <div class="etapa-numero">III</div>
+          <div class="etapa-contenido">
+            <h3>Sostenibilidad, Evaluación y Trascendencia</h3>
+            <div class="etapa-pasos">
+              <div class="paso">
+                <span class="paso-icon">⚙️</span>
+                <div>
+                  <strong>Mantenimiento y monitoreo de largo plazo</strong>
+                  <p>Seguimiento de supervivencia de flora plantada y estabilidad de suelos y cuerpos de agua saneados.</p>
+                </div>
+              </div>
+              <div class="paso">
+                <span class="paso-icon">🏆</span>
+                <div>
+                  <strong>Consolidación como referente nacional e internacional</strong>
+                  <p>Documentación de procesos científicos como modelos de gestión institucional.</p>
+                </div>
+              </div>
+              <div class="paso">
+                <span class="paso-icon">👥</span>
+                <div>
+                  <strong>Empoderamiento ciudadano permanente</strong>
+                  <p>Redes de sociedad organizada y consciente que asumen la custodia de los ecosistemas restaurados.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       ODS
+  =========================================== -->
+  <section class="ods-section" id="ods">
+    <div class="contenedor">
+      <div class="ods-header reveal-up">
+        <span class="etiqueta">Objetivos de Desarrollo Sostenible</span>
+        <h2>Alineados con la agenda global</h2>
+        <p>Confiamos que la sociedad organizada y consciente puede lograr los cambios necesarios. Por ello, nos alineamos a 3 ODS de la ONU.</p>
+      </div>
+      <div class="ods-cards">
+        <div class="ods-card ods-azul reveal-up delay-1">
+          <div class="ods-numero">6</div>
+          <div class="ods-info">
+            <h4>Agua Limpia y Saneamiento</h4>
+            <p>Intervenciones directas en cuerpos de agua y recuperación de suelos contaminados.</p>
+          </div>
+        </div>
+        <div class="ods-card ods-verde reveal-up delay-2">
+          <div class="ods-numero">13</div>
+          <div class="ods-info">
+            <h4>Acción por el Clima</h4>
+            <p>Reforestación estratégica como acción directa contra el cambio climático.</p>
+          </div>
+        </div>
+        <div class="ods-card ods-esmeralda reveal-up delay-3">
+          <div class="ods-numero">15</div>
+          <div class="ods-info">
+            <h4>Vida de Ecosistemas Terrestres</h4>
+            <p>Preservación y restauración de flora y fauna silvestre en marcos legales autorizados.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -182,42 +410,40 @@
   =========================================== -->
   <section class="galeria" id="galeria">
     <div class="contenedor">
-      <div class="galeria-header">
+      <div class="galeria-header reveal-up">
         <span class="etiqueta">Proyectos</span>
         <h2>Nuestro trabajo en imágenes</h2>
-        <!-- ✏️ REEMPLAZA cuando haya proyectos reales -->
-        <p>Aquí irán las fotografías de los proyectos realizados. Por el momento este espacio está reservado.</p>
+        <p>Próximamente compartiremos fotografías de nuestras intervenciones en campo. Este espacio está reservado para documentar nuestro impacto.</p>
       </div>
       <div class="galeria-grid">
-        <!-- 📸 REEMPLAZA cada placeholder con <img src="..." alt="..."> -->
-        <div class="galeria-item grande">
+        <div class="galeria-item grande reveal-up">
           <div class="galeria-placeholder">
             <span>🌳</span>
-            <p>Foto principal del proyecto</p>
+            <p>Jornada de reforestación</p>
           </div>
         </div>
-        <div class="galeria-item">
+        <div class="galeria-item reveal-up delay-1">
           <div class="galeria-placeholder">
             <span>🌿</span>
-            <p>Foto del proyecto</p>
+            <p>Saneamiento de suelos</p>
           </div>
         </div>
-        <div class="galeria-item">
-          <div class="galeria-placeholder">
-            <span>🌍</span>
-            <p>Foto del proyecto</p>
-          </div>
-        </div>
-        <div class="galeria-item">
+        <div class="galeria-item reveal-up delay-2">
           <div class="galeria-placeholder">
             <span>💧</span>
-            <p>Foto del proyecto</p>
+            <p>Recuperación de cuerpos de agua</p>
           </div>
         </div>
-        <div class="galeria-item grande">
+        <div class="galeria-item reveal-up delay-1">
+          <div class="galeria-placeholder">
+            <span>🦋</span>
+            <p>Preservación de fauna</p>
+          </div>
+        </div>
+        <div class="galeria-item grande reveal-up delay-2">
           <div class="galeria-placeholder">
             <span>🌱</span>
-            <p>Foto del proyecto</p>
+            <p>Talleres comunitarios</p>
           </div>
         </div>
       </div>
@@ -230,39 +456,41 @@
   <section class="educacion" id="educacion">
     <div class="contenedor">
       <div class="educacion-grid">
-        <div class="educacion-texto">
-          <span class="etiqueta">Educación ambiental</span>
+        <div class="educacion-texto reveal-left">
+          <span class="etiqueta">Educación Ambiental</span>
           <h2>Sembramos conciencia desde las raíces</h2>
           <p>
-            <!-- ✏️ REEMPLAZA con descripción real del programa educativo -->
-            La educación es parte fundamental de nuestra misión. Trabajamos con
-            escuelas, comunidades y empresas para crear una cultura ambiental
-            que trascienda más allá de cada árbol plantado.
+            La educación ambiental es parte fundamental de nuestra misión. Trabajamos con 
+            comunidades, escuelas y empresas para crear una cultura ambiental que trascienda 
+            más allá de cada árbol plantado.
           </p>
           <ul class="lista-edu">
-            <!-- ✏️ REEMPLAZA con actividades reales -->
-            <li>Talleres de reforestación para niños y jóvenes</li>
-            <li>Pláticas sobre biodiversidad y ecosistemas locales</li>
+            <li>Talleres comunitarios sobre prevención de la contaminación del aire, agua y suelo</li>
+            <li>Actividades de educación ambiental con la población local</li>
+            <li>Coordinación de voluntarios y aliados estratégicos</li>
             <li>Recorridos guiados por zonas reforestadas</li>
-            <li>Materiales didácticos gratuitos para escuelas</li>
+            <li>Sensibilización sobre importancia de los ODS de la ONU</li>
           </ul>
           <a href="#contacto" class="btn btn-primario">Solicitar un taller</a>
         </div>
-        <div class="educacion-visual">
+        <div class="educacion-visual reveal-right">
           <h3>¿A quién va dirigido?</h3>
           <p>
-            <!-- ✏️ REEMPLAZA con descripción real del público -->
-            Nuestros programas están diseñados para el público en general:
-            niños, jóvenes, adultos, escuelas, empresas y comunidades
-            que quieran ser parte del cambio ambiental.
+            Nuestros programas de educación ambiental están diseñados para el público en general: 
+            niños, jóvenes, adultos, escuelas, empresas y comunidades que quieran ser parte activa 
+            del cambio ambiental, bajo los valores de responsabilidad y compromiso social.
           </p>
           <br/>
-          <h3 style="margin-top:8px">¿Cómo participar?</h3>
+          <h3>¿Cómo participar?</h3>
           <p>
-            <!-- ✏️ REEMPLAZA con instrucciones reales -->
-            Solo contáctanos y coordinamos una sesión adaptada a tu grupo
-            o institución, sin costo o con cuota de recuperación simbólica.
+            Contáctanos y coordinamos una sesión adaptada a tu grupo o institución. 
+            Trabajamos bajo el modelo de "sociedad organizada y consciente", 
+            involucrando a todos los actores para un impacto positivo y generacional.
           </p>
+          <div class="edu-contacto-rapido">
+            <a href="tel:+524928690952" class="edu-link">📱 +52 492 869 09 52</a>
+            <a href="mailto:contacto@oikosbrana.com" class="edu-link">📧 contacto@oikosbrana.com</a>
+          </div>
         </div>
       </div>
     </div>
@@ -274,17 +502,24 @@
   <section class="contacto" id="contacto">
     <div class="contenedor">
       <div class="contacto-inner">
-        <div class="contacto-info">
+        <div class="contacto-info reveal-left">
           <span class="etiqueta">Contacto</span>
           <h2>Hablemos y sembremos juntos</h2>
           <p>¿Tienes un proyecto, quieres un taller o simplemente quieres saber más? Escríbenos.</p>
 
           <div class="dato-contacto">
+            <div class="dato-icono">🌐</div>
+            <div class="dato-texto">
+              <small>Sitio web</small>
+              <strong><a href="https://oikosbrana.com" target="_blank">oikosbrana.com</a></strong>
+            </div>
+          </div>
+
+          <div class="dato-contacto">
             <div class="dato-icono">📧</div>
             <div class="dato-texto">
-              <small>Correo</small>
-              <!-- ✏️ REEMPLAZA con correo real -->
-              <strong>contacto@oikosbrana.com</strong>
+              <small>Correo electrónico</small>
+              <strong><a href="mailto:contacto@oikosbrana.com">contacto@oikosbrana.com</a></strong>
             </div>
           </div>
 
@@ -292,8 +527,7 @@
             <div class="dato-icono">📱</div>
             <div class="dato-texto">
               <small>WhatsApp / Teléfono</small>
-              <!-- ✏️ REEMPLAZA con número real -->
-              <strong>[+52 000 000 0000]</strong>
+              <strong><a href="https://wa.me/524928690952" target="_blank">+52 492 869 09 52</a></strong>
             </div>
           </div>
 
@@ -301,32 +535,81 @@
             <div class="dato-icono">📍</div>
             <div class="dato-texto">
               <small>Zona de operación</small>
-              <!-- ✏️ REEMPLAZA con zona real -->
-              <strong>Con base en Fresnillo, Zacatecas, y visión internacional</strong>
+              <strong>Con base en Fresnillo, Zacatecas · Visión nacional e internacional</strong>
             </div>
+          </div>
+
+          <div class="redes-sociales">
+            <a href="https://www.facebook.com/OikosBranaAC" target="_blank" class="red-social red-fb">
+              <span>f</span> Facebook
+            </a>
+            <a href="https://www.instagram.com/OikosBranaAC" target="_blank" class="red-social red-ig">
+              <span>📷</span> Instagram
+            </a>
           </div>
         </div>
 
-        <form class="form-contacto" onsubmit="enviarFormulario(event)">
+        <!-- FORMULARIO FUNCIONAL VÍA FORMSPREE -->
+        <!-- INSTRUCCIÓN: Registra tu formulario en https://formspree.io y reemplaza 
+             "TU_ID_FORMSPREE" con el ID que te dan (ej: xpwzjkrl) -->
+        <form 
+          class="form-contacto reveal-right" 
+          id="form-contacto"
+          action="https://formspree.io/f/TU_ID_FORMSPREE" 
+          method="POST"
+        >
+          <input type="hidden" name="_subject" value="Nuevo contacto desde oikosbrana.com" />
+          <input type="hidden" name="_language" value="es" />
+          <input type="text" name="_gotcha" style="display:none" />
+
           <div class="form-fila">
             <div class="campo">
-              <label for="nombre">Nombre</label>
-              <input type="text" id="nombre" placeholder="Tu nombre" required/>
+              <label for="nombre">Nombre completo</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required/>
             </div>
             <div class="campo">
-              <label for="email">Correo</label>
-              <input type="email" id="email" placeholder="tu@correo.com" required/>
+              <label for="email">Correo electrónico</label>
+              <input type="email" id="email" name="email" placeholder="tu@correo.com" required/>
             </div>
           </div>
+
+          <div class="campo">
+            <label for="telefono">Teléfono (opcional)</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="+52 000 000 0000"/>
+          </div>
+
           <div class="campo">
             <label for="asunto">Asunto</label>
-            <input type="text" id="asunto" placeholder="¿En qué podemos ayudarte?"/>
+            <select id="asunto" name="asunto">
+              <option value="">Selecciona un tema</option>
+              <option value="reforestacion">Proyecto de reforestación</option>
+              <option value="taller">Solicitar taller educativo</option>
+              <option value="donacion">Donación o patrocinio</option>
+              <option value="voluntariado">Voluntariado</option>
+              <option value="alianza">Alianza estratégica</option>
+              <option value="otro">Otro</option>
+            </select>
           </div>
+
           <div class="campo">
             <label for="mensaje">Mensaje</label>
-            <textarea id="mensaje" placeholder="Cuéntanos más..." required></textarea>
+            <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos más sobre tu interés o proyecto..." required></textarea>
           </div>
-          <button type="submit" class="btn-enviar">Enviar mensaje</button>
+
+          <button type="submit" class="btn-enviar" id="btn-enviar">
+            <span class="btn-texto">Enviar mensaje 🌱</span>
+            <span class="btn-loading" style="display:none">Enviando...</span>
+          </button>
+
+          <div class="form-success" id="form-success" style="display:none">
+            <span>✅</span>
+            <p>¡Mensaje enviado! Te contactaremos pronto.</p>
+          </div>
+
+          <div class="form-error" id="form-error" style="display:none">
+            <span>⚠️</span>
+            <p>Hubo un error. Por favor escríbenos directamente a <a href="mailto:contacto@oikosbrana.com">contacto@oikosbrana.com</a></p>
+          </div>
         </form>
       </div>
     </div>
@@ -339,35 +622,44 @@
     <div class="contenedor">
       <div class="footer-inner">
         <div class="footer-marca">
-          <div class="logo">Oikos Brana A.C<span>.</span></div>
-          <p>
-            <!-- ✏️ REEMPLAZA con misión corta -->
-            Reforestando el futuro, un árbol a la vez.
-          </p>
+          <div class="logo">Oikos Brana<span>.</span></div>
+          <p>Restaurando el equilibrio natural, un árbol a la vez. Transparencia absoluta en cada acción.</p>
+          <div class="footer-redes">
+            <a href="https://www.facebook.com/OikosBranaAC" target="_blank" aria-label="Facebook">fb</a>
+            <a href="https://www.instagram.com/OikosBranaAC" target="_blank" aria-label="Instagram">ig</a>
+            <a href="https://wa.me/524928690952" target="_blank" aria-label="WhatsApp">wa</a>
+          </div>
         </div>
         <div class="footer-links">
           <h4>Navegación</h4>
           <ul>
             <li><a href="#sobre">Nosotros</a></li>
+            <li><a href="#objetivo">Objetivo</a></li>
             <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#galeria">Proyectos</a></li>
+            <li><a href="#etapas">Programa</a></li>
             <li><a href="#educacion">Educación</a></li>
             <li><a href="#contacto">Contacto</a></li>
           </ul>
         </div>
         <div class="footer-links">
-          <h4>Redes sociales</h4>
+          <h4>Contacto</h4>
           <ul>
-            <!-- ✏️ REEMPLAZA con URLs reales cuando existan -->
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">YouTube</a></li>
+            <li><a href="mailto:contacto@oikosbrana.com">contacto@oikosbrana.com</a></li>
+            <li><a href="https://wa.me/524928690952">+52 492 869 09 52</a></li>
+            <li><a href="https://oikosbrana.com">oikosbrana.com</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>ODS Alineados</h4>
+          <ul>
+            <li><a href="#ods">ODS 6 · Agua Limpia</a></li>
+            <li><a href="#ods">ODS 13 · Acción Climática</a></li>
+            <li><a href="#ods">ODS 15 · Vida Terrestre</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <!-- ✏️ REEMPLAZA con nombre real y año -->
-        &copy; 2025 Oikos Brana A.C. Todos los derechos reservados.
+        &copy; 2025 Oikos Brana A.C. Todos los derechos reservados. · Fresnillo, Zacatecas, México
       </div>
     </div>
   </footer>
@@ -376,7 +668,56 @@
        JAVASCRIPT
   =========================================== -->
   <script>
-    // Menú hamburguesa (móvil)
+    // ===== LOADER =====
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.getElementById('loader').classList.add('loader-hidden');
+      }, 1200);
+    });
+
+    // ===== CURSOR PERSONALIZADO =====
+    const cursor = document.getElementById('cursor');
+    const follower = document.getElementById('cursor-follower');
+    let mouseX = 0, mouseY = 0, followX = 0, followY = 0;
+
+    document.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      cursor.style.left = mouseX + 'px';
+      cursor.style.top  = mouseY + 'px';
+    });
+
+    function animateFollower() {
+      followX += (mouseX - followX) * 0.12;
+      followY += (mouseY - followY) * 0.12;
+      follower.style.left = followX + 'px';
+      follower.style.top  = followY + 'px';
+      requestAnimationFrame(animateFollower);
+    }
+    animateFollower();
+
+    document.querySelectorAll('a, button, .card, .ods-card').forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        cursor.classList.add('cursor-hover');
+        follower.classList.add('cursor-hover');
+      });
+      el.addEventListener('mouseleave', () => {
+        cursor.classList.remove('cursor-hover');
+        follower.classList.remove('cursor-hover');
+      });
+    });
+
+    // ===== NAVBAR SCROLL =====
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 60) {
+        navbar.classList.add('nav-scrolled');
+      } else {
+        navbar.classList.remove('nav-scrolled');
+      }
+    });
+
+    // ===== MENÚ HAMBURGUESA =====
     const hamburguesa = document.getElementById('hamburguesa');
     const navLinks    = document.getElementById('nav-links');
     const navCta      = document.getElementById('nav-cta');
@@ -384,22 +725,140 @@
     hamburguesa.addEventListener('click', () => {
       navLinks.classList.toggle('abierto');
       navCta.classList.toggle('abierto');
+      hamburguesa.classList.toggle('activo');
     });
 
-    // Cerrar menú al hacer clic en un enlace
     navLinks.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         navLinks.classList.remove('abierto');
         navCta.classList.remove('abierto');
+        hamburguesa.classList.remove('activo');
       });
     });
 
-    // Formulario de contacto (placeholder — conectar con backend o Formspree)
-    function enviarFormulario(e) {
-      e.preventDefault();
-      alert('Mensaje enviado. ¡Gracias por contactarnos!\n\n(Conecta este formulario a Formspree o tu correo cuando tengas el dominio.)');
-      e.target.reset();
+    // ===== SCROLL REVEAL =====
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+
+    document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right').forEach(el => {
+      revealObserver.observe(el);
+    });
+
+    // ===== CONTADOR ANIMADO =====
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const target = parseInt(el.dataset.target);
+          let current = 0;
+          const step = target / 60;
+          const timer = setInterval(() => {
+            current += step;
+            if (current >= target) {
+              el.textContent = target;
+              clearInterval(timer);
+            } else {
+              el.textContent = Math.floor(current);
+            }
+          }, 16);
+          counterObserver.unobserve(el);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.counter').forEach(el => counterObserver.observe(el));
+
+    // ===== PARTÍCULAS EN HERO =====
+    const particlesContainer = document.getElementById('particles');
+    for (let i = 0; i < 24; i++) {
+      const p = document.createElement('div');
+      p.className = 'particle';
+      p.style.cssText = `
+        left: ${Math.random() * 100}%;
+        top: ${Math.random() * 100}%;
+        width: ${Math.random() * 6 + 2}px;
+        height: ${Math.random() * 6 + 2}px;
+        animation-duration: ${Math.random() * 8 + 6}s;
+        animation-delay: ${Math.random() * 4}s;
+        opacity: ${Math.random() * 0.5 + 0.1};
+      `;
+      particlesContainer.appendChild(p);
     }
+
+    // ===== FORMULARIO DE CONTACTO =====
+    const form = document.getElementById('form-contacto');
+    const btnEnviar = document.getElementById('btn-enviar');
+    const btnTexto = btnEnviar.querySelector('.btn-texto');
+    const btnLoading = btnEnviar.querySelector('.btn-loading');
+    const formSuccess = document.getElementById('form-success');
+    const formError = document.getElementById('form-error');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Mostrar loading
+      btnTexto.style.display = 'none';
+      btnLoading.style.display = 'block';
+      btnEnviar.disabled = true;
+      formSuccess.style.display = 'none';
+      formError.style.display = 'none';
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          formSuccess.style.display = 'flex';
+          form.reset();
+        } else {
+          formError.style.display = 'flex';
+        }
+      } catch (err) {
+        formError.style.display = 'flex';
+      } finally {
+        btnTexto.style.display = 'block';
+        btnLoading.style.display = 'none';
+        btnEnviar.disabled = false;
+      }
+    });
+
+    // ===== ACTIVE NAV LINK ON SCROLL =====
+    const sections = document.querySelectorAll('section[id]');
+    const navLinkEls = document.querySelectorAll('.nav-link');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        if (window.scrollY >= sectionTop) {
+          current = section.getAttribute('id');
+        }
+      });
+      navLinkEls.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
+      });
+    });
+
+    // ===== PARALLAX SUTIL EN HERO =====
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      const hero = document.querySelector('.hero');
+      if (hero && scrollY < window.innerHeight) {
+        hero.style.backgroundPositionY = `${scrollY * 0.4}px`;
+      }
+    });
   </script>
 
 </body>
