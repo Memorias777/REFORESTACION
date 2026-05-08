@@ -675,38 +675,6 @@
       }, 1200);
     });
 
-    // ===== CURSOR PERSONALIZADO =====
-    const cursor = document.getElementById('cursor');
-    const follower = document.getElementById('cursor-follower');
-    let mouseX = 0, mouseY = 0, followX = 0, followY = 0;
-
-    document.addEventListener('mousemove', (e) => {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-      cursor.style.left = mouseX + 'px';
-      cursor.style.top  = mouseY + 'px';
-    });
-
-    function animateFollower() {
-      followX += (mouseX - followX) * 0.12;
-      followY += (mouseY - followY) * 0.12;
-      follower.style.left = followX + 'px';
-      follower.style.top  = followY + 'px';
-      requestAnimationFrame(animateFollower);
-    }
-    animateFollower();
-
-    document.querySelectorAll('a, button, .card, .ods-card').forEach(el => {
-      el.addEventListener('mouseenter', () => {
-        cursor.classList.add('cursor-hover');
-        follower.classList.add('cursor-hover');
-      });
-      el.addEventListener('mouseleave', () => {
-        cursor.classList.remove('cursor-hover');
-        follower.classList.remove('cursor-hover');
-      });
-    });
-
     // ===== NAVBAR SCROLL =====
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
