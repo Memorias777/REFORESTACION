@@ -11,6 +11,15 @@
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <script>
+    // Prevenir parpadeo (FOUC) aplicando el tema inmediatamente
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  </script>
 </head>
 
 <body>
@@ -40,7 +49,28 @@
         <li><a href="#educacion" class="nav-link">Educación</a></li>
         <li><a href="#contacto" class="nav-link">Contacto</a></li>
       </ul>
-      <a href="#contacto" class="btn btn-primario nav-cta" id="nav-cta">Contáctanos</a>
+      <div class="nav-actions" style="display: flex; align-items: center; gap: 16px;">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">
+          <svg id="icon-sun" style="display: none;" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <a href="#contacto" class="btn btn-primario nav-cta" id="nav-cta">Contáctanos</a>
+      </div>
       <button class="hamburguesa" id="hamburguesa" aria-label="Abrir menú">
         <span></span><span></span><span></span>
       </button>
@@ -836,6 +866,33 @@
       if (hero && scrollY < window.innerHeight) {
         hero.style.backgroundPositionY = `${scrollY * 0.4}px`;
       }
+    });
+
+    // ===== THEME TOGGLE =====
+    const themeToggle = document.getElementById('theme-toggle');
+    const iconSun = document.getElementById('icon-sun');
+    const iconMoon = document.getElementById('icon-moon');
+
+    function updateThemeIcons() {
+      if (document.documentElement.getAttribute('data-theme') === 'dark') {
+        iconSun.style.display = 'block';
+        iconMoon.style.display = 'none';
+      } else {
+        iconSun.style.display = 'none';
+        iconMoon.style.display = 'block';
+      }
+    }
+
+    // Inicializar iconos
+    updateThemeIcons();
+
+    themeToggle.addEventListener('click', () => {
+      let currentTheme = document.documentElement.getAttribute('data-theme');
+      let targetTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+      document.documentElement.setAttribute('data-theme', targetTheme);
+      localStorage.setItem('theme', targetTheme);
+      updateThemeIcons();
     });
   </script>
 
